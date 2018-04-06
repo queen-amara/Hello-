@@ -1,0 +1,148 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Address Book </title>
+</head>
+<style>
+  .heading {
+    color: grey;
+    font-family: cursive;
+  }
+
+  .title {
+    border-width: 2px;
+    border-style: dotted;
+    border-color: white;
+    background-color: black;
+    height: 200px;
+
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .main {
+    height: 400px;
+    background-color: gray;
+  }
+
+  .search-bar {
+    height: 30px;
+    width: 300px;
+    background-color: white;
+  }
+
+  .contact-list {
+    height: 300px;
+    background-color: green;
+  }
+
+  .add-icon {
+    height: 70px;
+  }
+
+  .tap {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  div#quick-form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000000a8;
+}
+
+.quickaddForm {
+    background: #fefefe;
+    width: 50%;
+    margin: 10% auto;
+}
+
+</style>
+
+<body>
+  <div class="container" ; style="background-color:black; height:700px;">
+    <div class="title">
+      <h1 class=heading> "Address Book"</h1>
+      <img src="https://pbs.twimg.com/profile_images/647544968777756672/-Ms_S6bh_400x400.png" alt="Andela" style="width:100px;height:100px;">
+    </div>
+    <div class="main">
+      <center>
+        <div class="search-bar">
+          <input type="search" id="mysearch" placeholder="Search for contacts..">
+          <button onclick="myFunction()">Search</button>
+
+
+         </div>
+
+      </center>
+      <div class="contact-list">
+          <table id= "regtable" style="width:100%">
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>E-mail adddress</th>
+                <th></th>
+              </tr>
+              </table>
+        <!-- <div class= "entry">
+            <div class= "firstname"><p> Ohiri-Anyanwu </p></div>
+            <div class= "lastname"><p> Amarachi </p></div>
+            <div class= "address"><p> O2 Ibiyemi street Palmgrove </p></div>
+            <div class= "phone"><p> 08131087488 </p></div>
+            <div class= "email"><p> queen_amarachi@yahoo.com </p></div>
+            <div class= "del"><a href= "#"> Delete</a></div>
+          </div> -->
+
+        </div>
+      <center>
+        <div class="quickadd">
+          <button id="Quickadd"> + Add</button>
+        </div>
+      </center>
+      <div class="overlay" id="quick-form" style="display: none;">
+        <div class="quickaddForm">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" class="formfield" placeholder="Your name.."></input>
+          <br>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" class="formfield" placeholder="Your last name.."></input>
+          <br>
+          <label for="address">Adress</label>
+          <textarea name="address" id="address" cols="30" rows="10" class="formField" placeholder="Your address.."></textarea>
+          <br>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" class="formField" placeholder="Your phone number.."></input>
+          <br>
+          <label for="email">Email</label>
+          <input type="text" id="email" class="formField" placeholder="Your E-mail address.."></input>
+
+          <input type="hidden" id="index" class="formField"></input>          
+          <br>
+          <br>
+          <button id="Add"> Save </button><button id= "cancel"> Cancel </button>
+        </div>
+      </div>
+      
+
+    </div>
+  <script src="scripts.js"></script>
+
+
+</body>
+
+</html>
